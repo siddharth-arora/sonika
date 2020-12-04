@@ -1,0 +1,18 @@
+{% extends "app1/cbv_app_base.html" %}
+{% block content %}
+    <h2 class="display-2">School Delete Confirmation Page</h2>
+    <h3>Are you sure you want to delete the School {{school.name}}?</h3>
+    <form method="post">
+        {% csrf_token %}
+        <button 
+            type="submit" 
+            class="btn btn-primary">
+            Yes
+        </button>
+        <a
+            href="/"
+            class="btn btn-danger">
+            No
+        </a>
+    </form>
+{% endblock %}

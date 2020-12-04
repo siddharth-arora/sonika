@@ -1,0 +1,14 @@
+{% extends "app1/cbv_app_base.html" %}
+{% block content %}
+    <h2 class="display-2">List of Schools:</h2>
+    <ul class="list-group">
+        {% for school in allschools %}
+        <li class="list-group-item list-group-item-action">
+            <!-- <a href="{{school.id}}">{{school.name}}</a> -->
+            <!-- <a href="school{{school.id}}">{{school.name}}</a> -->
+            <!-- <a href="school/{{school.id}}">{{school.name}}</a> -->
+            <a href="school={{school.id}}">{{school.name}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
